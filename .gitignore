@@ -1,2 +1,5 @@
-HelloDocker/.idea
-HelloDocker/db.sqlite3
+*.pyc
+*~
+*.swp
+db.sqlite3
+.idea
