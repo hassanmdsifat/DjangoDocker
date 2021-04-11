@@ -3,3 +3,4 @@
 *.swp
 db.sqlite3
 .idea
+/config/

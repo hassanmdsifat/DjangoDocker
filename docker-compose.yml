@@ -1,0 +1,26 @@
+version: "3.8"
+services:
+  firstapp:
+    depends_on:
+      - restapi
+    ports:
+      - 8000:8000
+    build:
+      context: ./HelloDocker
+      dockerfile: ./Dockerfile
+    volumes:
+    - static_files:/HelloDocker/static
+    env_file:
+      - ./config/.env
+  restapi:
+    ports:
+      - 8001:8000
+    build:
+      context: ./RestApi
+      dockerfile: ./Dockerfile
+    env_file:
+      - ./config/.env
+    volumes:
+      - static_files:/RestApi/static
+volumes:
+  static_files:

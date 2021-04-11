@@ -1,6 +1,10 @@
 # This is a gradually developing project while I am learning docker
-## Commends to be needed to run the code
-## Currently Root Directory **HelloDocker**
+## Commends to be needed to build the containers
 ```
-docker build -t django-app .
+docker-compose build
+```
+
+## Commends to be needed to run the containers
+```
+docker-compose run
 ```
